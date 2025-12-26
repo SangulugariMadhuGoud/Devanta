@@ -98,3 +98,26 @@ src/
 ## License
 
 © 2024 Devanta Lifesciences. All rights reserved.
+
+## Deployment
+
+Deployment to Vercel
+
+- Via Vercel Dashboard (recommended):
+	1. Go to https://vercel.com and sign in (use GitHub OAuth).
+	2. Click "New Project" → "Import Git Repository" → choose `SangulugariMadhuGoud/Devanta`.
+	3. Set **Build Command** to `npm run build` and **Output Directory** to `dist`.
+	4. Click "Deploy". For production, pick the `main` branch.
+
+- Via Vercel CLI:
+	```powershell
+	npm i -g vercel
+	vercel login
+	cd path\to\Devanta
+	vercel --prod
+	```
+
+Notes
+
+- `vercel.json` is included to ensure a static build and SPA fallback to `index.html`.
+- If your site needs environment variables, set them in the Vercel dashboard under Project Settings → Environment Variables.
